@@ -1,0 +1,14 @@
+@keyframes radar { to { transform: rotate(360deg); } }
+@keyframes loaderPulse { from { transform: scaleY(.35); opacity: .45; } to { transform: scaleY(1); opacity: 1; } }
+@keyframes floatSatellite { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(9px,-12px) rotate(12deg); } }
+@keyframes floatDebris { 0%,100% { transform: translate(0,0); opacity: .55; } 50% { transform: translate(8px,-9px); opacity: 1; } }
+@keyframes orbitRotate { to { transform: rotate(360deg); } }
+.satellite-one { animation: floatSatellite 7s ease-in-out infinite; }
+.satellite-two { animation: floatSatellite 9s ease-in-out infinite reverse; }
+.debris-one { animation: floatDebris 5s ease-in-out infinite; }
+.debris-two { animation: floatDebris 6s ease-in-out infinite .8s; }
+.debris-three { animation: floatDebris 7s ease-in-out infinite 1.3s; }
+.orbit-path.path-geo { animation: orbitRotate 100s linear infinite; }
+.orbit-path.path-meo { animation: orbitRotate 70s linear infinite reverse; }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
